@@ -37,13 +37,15 @@ fun main() {
     val max:Int = if(a>b) a else b
 
     //Range 表达式、区间、数列
-    //1..20 [1,20]
+    //..是运算符
+    //1..20 [1,20] 等价于 1.rangeTo(20)
     //1 until 20 [1,20)
     // in or !in 区间、集合
     //IntRange、LongRange、CharRange 可以进行迭代，但是浮点型（Double和Float的range），只能判断in or !in
 
     // downTo、step、reversed、.last\.first\.step、.filter(过滤函数)
-    // 自定义Range
+    // [#]自定义Range  - 待ing - 暂时没有需求，之后再继续补强
+
 //    if(a in 1..20) println("正确")//表示[1,20],左闭右闭区间
 //    if(a in 20 downTo 1) println("反向-正确")
     //类的区间
@@ -61,12 +63,23 @@ fun main() {
 //    println("first:$first")
 //    println("step:$step")
 
-    //过滤函数.filter()
-    val filter = (1..20).filter { it % 3 == 0 }
-    //List.forEach{} 遍历输出当前集合
-    filter.forEach { println(it) }
+    //过滤函数.filter() 过滤函数的返回值是经过过滤之后的对应集合
+//    val filter = (1..20).filter { it % 3 == 0 }
+//    //List.forEach{} 遍历输出当前集合
+//    filter.forEach { println(it) }
 
-    //when 表达式
+    //可以链式调用
+//    (1..30).filter { it % 4 == 0 }.forEach { println(it) }
+//    1.rangeTo(10).forEach { println(it) }
+
+    //when 表达式 想到于 Java的switch 表达式
+//    val grade = when (10) {
+//        in 1..20 -> "第一阶段"
+//        in 21..200 -> "第二阶段"
+//        else -> "超级"
+//    }
+//    println(grade)
+
 
 }
 class Data{
