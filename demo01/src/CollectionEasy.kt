@@ -1,5 +1,7 @@
 //简单的集合使用
 //set、List、Map
+//只读接口、可变接口
+//例如：listOf、mutableListOf
 fun main() {
     //list 的只读集合声明
     val nameList = listOf("lay","zjz","szy","wy")

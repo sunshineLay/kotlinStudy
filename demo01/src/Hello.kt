@@ -72,13 +72,16 @@ fun main() {
 //    (1..30).filter { it % 4 == 0 }.forEach { println(it) }
 //    1.rangeTo(10).forEach { println(it) }
 
-    //when 表达式 想到于 Java的switch 表达式
+    //when 表达式 相当于 Java的switch 表达式
+    // 所有写到else if的条件语句，都应该考虑去使用when表达式
 //    val grade = when (10) {
 //        in 1..20 -> "第一阶段"
 //        in 21..200 -> "第二阶段"
 //        else -> "超级"
 //    }
 //    println(grade)
+
+    //如何理解Any?
 
 
 }
