@@ -9,5 +9,4 @@ fun main() {
     //list的Range 表达式
     val age = 22
     if (age in ageList) println("age 存在于集合ageList中")
-
 }
