@@ -81,7 +81,7 @@ fun main() {
 //    }
 //    println(grade)
 
-    //如何理解Any?
+    //如何理解Any?回答：Any?是Kotlin所有类的根类，包括Any
 
 
 }
