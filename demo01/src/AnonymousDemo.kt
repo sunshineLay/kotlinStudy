@@ -1,3 +1,9 @@
+import java.time.Instant
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+
+//匿名函数（一）
 
 //匿名函数：定义时没有名字的函数。可以参考Java的匿名内部类
 //匿名函数的好处: 第一点，在于可以轻松指定规则。
@@ -42,20 +48,39 @@ fun main() {
 //    println(test01(25,162,"lad"))
 
     //lambda 表达式
+//    {x: Int, y: Int -> x + y}
 
     //定义函数参数是函数：高阶函数
     //例如："lay".count(rule)
 
     //lambda 简略写法
     //01 -  函数的参数就是一个匿名参数
-    "niubuniubi,kanxinqing".count { its ->
-        its == 'n'
+    //01-1
+//    "niubuniubi,kanxinqing".count { its ->
+//        its == 'n'
+//    }
+    //01-2
+    showTimestamp {
+        Instant.now().toEpochMilli()
+        System.currentTimeMillis()
     }
     //02 - 函数的参数放在最后就能有简略写法
-
+    showStringTime("中国"){ currentMillis ->
+        val dfPattern = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+        val localTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(currentMillis), ZoneId.systemDefault())//使用系统默认的时区
+        dfPattern.format(localTime)
+    }
 
     //下一堂课从“函数内联”开始
 
-
+}
+//小知识：时间戳这串数字是世界唯一的，但是对应的具体时间不唯一。
+//函数简略写法情况一
+fun showTimestamp(timestamp:()->Long){
+    println("当前的时间戳是${timestamp()}")
+}
+//函数简略写法情况二
+fun showStringTime(region:String,timeStr:(Long)->String){
+    println("在${region}地区，现在的时间是${timeStr(Instant.now().toEpochMilli())}")
 }
 
