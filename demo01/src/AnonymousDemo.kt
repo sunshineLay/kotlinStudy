@@ -71,8 +71,6 @@ fun main() {
         dfPattern.format(localTime)
     }
 
-    //下一堂课从“函数内联”开始
-<<<<<<< HEAD
 
 }
 //小知识：时间戳这串数字是世界唯一的，但是对应的具体时间不唯一。
@@ -83,8 +81,6 @@ fun showTimestamp(timestamp:()->Long){
 //函数简略写法情况二
 fun showStringTime(region:String,timeStr:(Long)->String){
     println("在${region}地区，现在的时间是${timeStr(Instant.now().toEpochMilli())}")
-=======
->>>>>>> b1aaca6c145e31be1fdb5acfa0a0333c80efaa24
 }
 
 
