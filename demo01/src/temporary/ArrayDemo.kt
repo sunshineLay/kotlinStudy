@@ -21,5 +21,7 @@ fun main() {
 //    nullArr[0] = 3
 //    nullArr.forEach(::println)
 
+    //数组类型，基本数据类型有专有的数组类型。
+
 
 }
