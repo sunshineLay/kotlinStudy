@@ -35,7 +35,7 @@ fun chooseIdentity(identity: Identity) = when(identity){
 //新增员工编号，且老板没有员工编号
 sealed class Identity2{
     object Boss:Identity2()
-    class Staff(val staffId:String):Identity2()
+    class Staff(val staffId:String):Identity2()//比枚举类更好的地方是可以单独设置每一个子类的专用属性
     class Manager(val staffId:String):Identity2()
 }
 fun chooseIdentity2(identity: Identity2) = when(identity){

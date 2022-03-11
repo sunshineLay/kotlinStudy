@@ -39,3 +39,6 @@ class Test6{
         return "config"
     }
 }
+//面试题：lateinit var 和val xx by lazy 的对比
+//lateinit(延迟初始化属性)(只能用在var变量上)
+//by lazy(惰性初始化)(只能用在val变量上)
