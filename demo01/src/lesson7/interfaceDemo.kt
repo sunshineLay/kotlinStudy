@@ -11,16 +11,17 @@ interface Talk{
     //接口可以提供成员的默认实现
     val number :Int
         get() = (1..10).shuffled().first()
+//    val age: Int
     var talkContent:String?
     fun usedTalk()
     //接口可以提供成员的默认实现
     fun getAdmin() = "admin"
 }
-class Talker2(override var talkContent: String?) :Talk{
-    override fun usedTalk() {
-        println(talkContent)
-    }
-}
+//class Talker2(override var talkContent: String?) :Talk{
+//    override fun usedTalk() {
+//        println(talkContent)
+//    }
+//}
 
 //面试题：重写和重载的解释。
 //回答：重写就是子类重写父类。重载就是同一个类同名方法参数不同

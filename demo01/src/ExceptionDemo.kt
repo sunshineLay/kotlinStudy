@@ -6,7 +6,7 @@ import java.lang.NullPointerException
 //expression 表达式
 
 //Java 中异常分为受检异常（除了运行时异常的所有异常）和不受检的异常（运行异常）
-//Kotlin没有受检异常
+//Kotlin没有受检异常，只有运行时异常
 fun main() {
     //3.异常处理
 //例子：
